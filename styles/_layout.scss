@@ -1,0 +1,413 @@
+
+.indexHeader {
+    background-color:#ebebeb;
+    width:100%;
+    &Title {
+        @include flexbox-row;
+        width:auto;
+        background-color:white;
+        padding:18px;
+        box-shadow: 3px 3px 4px #d9d9d9;
+        &Logo {
+            width:auto;
+        }
+    }
+    &Location{
+        @include flexbox-row;
+        padding:15px;
+    }
+    &Menu{
+        @include flexbox-column;
+        padding:30px 75px;
+        background-color:#f6f6f6;
+        &Title{
+            padding:5px 0px 15px 0px;
+            margin:0;
+            font-size:1.8rem;
+            text-align:center;
+        }
+        &Span{
+            font-weight:300;
+            font-size:1.3rem;
+        }
+        &Button{
+            padding:14px 24px;
+            border-radius:50px;
+            color:white;
+            margin:25px;
+            background-color: $color-1; /* For browsers that do not support gradients */
+            background-image:linear-gradient(160deg, $color-2, $color-1);
+            box-shadow:3px 7px 10px #cccccc;
+            transition: linear 0.2s;
+            &:hover{
+                opacity:0.9;
+                box-shadow: 3px 10px 10px #b3b3b3;
+                transition: linear 0.2s;
+            }
+        }
+    }
+
+}
+.menuHeader {
+    background-color:#ebebeb;
+    width:100%;
+    &Back{
+        position:absolute;
+        top:50%;
+        left:30px;
+        font-size:1.6rem;
+        color:black;
+        transform: translateY(-50%);
+    }
+    &Title {
+        @include flexbox-row;
+        position: relative;
+        background-color:white;
+        padding:18px;
+        &Logo {
+            width:auto;
+        }
+    }
+    &Image{
+        width:100%;
+        object-fit:cover;
+        max-height:450px;
+    }
+
+}
+.fonctionnementSection {
+    @include flexbox-column;
+    width:100%;
+    background-color:white;
+    padding:30px 60px;
+    justify-content:flex-start;
+    &Title{
+        width:100%;
+        font-size:1.8rem;
+        padding:0px 15px;
+        margin:0px 0px 15px 0px;
+        max-width:2600px;
+    }
+    &Steps{
+        @include flexbox-row;     
+        justify-content:space-between;
+        align-items:stretch;
+        flex-wrap:wrap;
+        max-width:2600px;
+    }
+    &Step{
+        width:33%;
+        padding:15px;
+        margin-bottom:30px;
+        padding-left: 25px;
+        &Card{
+            @include flexbox-row;
+            flex-wrap: nowrap;
+            background-color:#f6f6f6;
+            box-shadow:3px 7px 10px #d9d9d9;
+            color:black;
+            border-radius:20px;
+            padding:25px;
+            font-weight:bold;
+            position:relative;
+            font-size:1.1rem;
+            height:100%;
+            transition: linear 0.2s;
+            &Puce{
+                @include flexbox-row;
+                position:absolute;
+                left:-13px;
+                top:50%;
+                transform: translate(0%, -50%);
+                background-color: $color-1;
+                color:white;
+                width:26px;
+                height:26px;
+                border-radius:30px;
+                font-size:0.9rem;    
+            }
+            .fas {
+                color:grey;
+                margin-right:15px;
+            }
+            &:hover{
+                background-color:#f1e9fb;
+                transition: linear 0.2s;
+                .fas{
+                    color:$color-1;
+                }
+            }
+        }
+    }
+}
+.restaurantSection{
+    @include flexbox-column;
+    background-color:#f6f6f6;
+    padding:30px 60px;
+    justify-content:flex-start;
+    &Title{
+        width:100%;
+        font-size:1.8rem;
+        padding:0px 15px;
+        margin:0px 0px 15px 0px;
+        max-width:2600px;
+    }
+    &Container{
+        @include flexbox-row;
+        justify-content:space-between;
+        max-width:2600px;
+        &Card{
+            padding:15px;
+            width:25%;
+            &Link{
+                @include flexbox-row;
+                border-radius:20px;
+                justify-content: space-around;
+                align-items:stretch;
+                overflow:hidden;
+                background-color:white;   
+                box-shadow:3px 7px 10px #d9d9d9;
+                position:relative;
+                &Figure{
+                    width:100%;
+                    margin:0; 
+                    &Img{
+                        width:100%;
+                        height:250px;
+                        object-fit:cover;
+                    }
+                    &Figcaption{
+                        padding:15px;
+                        color:black;
+                        position:relative;
+                    }
+                }
+            }
+        }
+    }
+}
+.menu{
+    background-color:#f6f6f6;
+    padding:30px;
+    border-radius:40px 40px 0px 0px;
+    width:70%;
+    max-width:1000px;
+    min-width:600px;
+    margin-top:-60px;
+    &Head{
+        @include flexbox-row;
+        flex-wrap:nowrap;
+        justify-content: space-between;
+        position:relative;
+        padding: 0px 15px;
+        &Title{
+            font-family: 'Shrikhand';
+            font-weight:100;
+            font-size:2rem;
+            margin:0;
+            padding:0px 0px 30px 0px;
+        }
+    }
+    &Section{
+        @include flexbox-row;
+        justify-content: space-between;
+        align-items: stretch;
+        padding-top:15px;
+        &Title{
+            width:100%;
+            padding:0px 15px;
+            margin:0;
+            &Content{
+                font-family: 'Roboto';
+                width:40px;
+                overflow:visible;
+                font-weight:normal;
+                font-size:1rem;
+                border-bottom:3px solid $color-3;
+                padding-bottom:4px;
+            }
+        }
+
+    }
+    &Card{
+        padding:7.5px 15px;
+        width:100%;
+        &Content{
+            @include flexbox-row;
+            cursor:pointer;
+            border-radius:15px;
+            justify-content: space-around;
+            align-items:stretch;
+            overflow:hidden;
+            background-color:white;   
+            box-shadow:3px 7px 10px #d9d9d9;
+            position:relative;
+            flex-wrap:nowrap;
+            &Main{
+                padding:15px;
+                @include flexbox-column;
+                &Title{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                &Caption{
+                    @include flexbox-row;
+                    flex-wrap:nowrap;
+                    justify-content: space-between;
+                    .caption{
+                        text-align:left;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        width:75%;
+                    }
+                    .price{
+                        text-align:right;
+                        white-space: nowrap;
+                        font-weight:bold;
+                        width:25%;
+                    } 
+                }
+            }
+            &Check{
+                @include flexbox-row;
+                background-color: $color-3;
+                margin:0 -4rem 0 0;
+                width: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-duration: .5s;
+                &Item{
+                    @include flexbox-row;
+                    background-color:white;
+                    color:$color-3;
+                    width:22px;
+                    height:22px;
+                    border-radius:50px;
+                }
+            }
+            &:hover .menuCardContentCheck{
+                margin:0;
+                transition-duration: .5s;
+            }
+            &:hover .menuCardContentCheckItem{
+                animation: rotate .4s linear;
+            }
+        }
+    }
+    &Buttons{
+        @include flexbox-row;
+        padding:15px 0px 30px 0px;
+        &Button{
+            padding:14px 48px;
+            border-radius:50px;
+            color:white;
+            margin:25px;
+            background-color: $color-1; /* For browsers that do not support gradients */
+            background-image:linear-gradient(160deg, $color-2, $color-1);
+            box-shadow:3px 7px 10px #cccccc;
+            transition: linear 0.2s;
+            &:hover{
+                opacity:0.9;
+                box-shadow: 3px 10px 10px #b3b3b3;
+                transition: linear 0.2s;
+            }
+        }
+    }
+}
+.footer {
+    @include flexbox-column;
+    background-color:#333333;
+    padding:30px 75px;
+    align-items:center;
+    &Title{
+        font-family: 'Shrikhand';
+        font-weight:100;
+        font-size:1.5rem;
+        margin:0;
+        margin-bottom:15px;
+        width:100%;
+        color:white;
+        max-width:2600px;
+    }
+    &Container{
+        @include flexbox-row;
+        justify-content:flex-start;
+        width:100%;
+        color:white;
+        max-width:2600px;
+        &Link{
+            color:white;
+            margin-bottom:7px;
+        }
+    }
+}
+.section1{
+    animation: displayAndMargin 0.5s linear;
+ 
+}
+.section2{
+    animation: displayAndMargin 0.75s linear;
+
+}
+.section3{
+    animation: displayAndMargin 1s linear;
+
+}
+
+
+
+@media (max-width: 1150px)
+{
+.restaurantSectionContainer{
+    &Card{
+        width:50%;
+    }
+}
+}
+@media (max-width: 950px)
+{
+.menu{
+    padding:15px;
+    &Head{
+        margin-top:15px;
+    }
+}
+}
+@media (max-width: 730px)
+{
+.indexHeader{
+    &Menu{
+        padding:30px 30px;
+    }
+}
+.fonctionnementSection{
+    padding:30px 15px;
+    flex-direction:column;
+    &Step{
+        width:100%;
+        margin-bottom:auto;
+    }
+}
+.restaurantSection{
+    padding:30px 15px;
+    &ContainerCard{
+        width:100%;
+        &LinkFigureImg{
+            height:200px;
+        }
+    }
+}
+.footer{
+    padding:30px 30px;
+}
+}
+@media (max-width: 600px)
+{
+.menu{
+    min-width:auto;
+    width:100%;
+}
+}
